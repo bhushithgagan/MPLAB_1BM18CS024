@@ -1,13 +1,3 @@
-
-Skip to content
-Using Gmail with screen readers
-Conversations
-1.2 GB (7%) of 15 GB used
-Manage
-Terms · Privacy · Program Policies
-Last account activity: 58 minutes ago
-Details
-
 .model small
 display macro msg
 lea dx,msg
@@ -66,5 +56,4 @@ next1: display msg4
  int 21h
  end start
 
-FILE024.asm
-Displaying FILE024.asm.
+
