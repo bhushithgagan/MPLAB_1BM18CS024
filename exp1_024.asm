@@ -1,20 +1,20 @@
 .model small
 .data
-x dw 10
+x db 2
 res dw ?
-.code
+
+.code 
 mov ax,@data
 mov ds,ax
 mov ax,x
+mul ax
 mul x
+mov bx,9
+mul bx
 mov bx,ax
+mov ax,x
+mul x
 mov cx,5
-mul cx
-mov cx,bx
-mov bx,ax
-mov ax,cx
-mul x
-mov cx,9
 mul cx
 add ax,bx
 sub ax,2

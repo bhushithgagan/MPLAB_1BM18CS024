@@ -14,12 +14,11 @@ resstr db 10h dup(0)
 len dw 0
 
 .code
-
         mov ax,@data
         mov ds,ax
         display msg1
         mov si,00h
-back1: mov ah,01h
+back1:  mov ah,01h
         int 21h
         cmp al,0dh
         jz next
@@ -33,6 +32,7 @@ next:   mov si,00h
         add di,len
         dec di
         mov cx,len
+        
 back2:  mov al,str[si]
         mov resstr[di],al
         inc si
@@ -48,7 +48,9 @@ back3:  mov bl,str[si]
         loop back3
         display msg2
         jmp last
-notpalin:display msg3
-last:mov ah,4ch
+
+notpalin:  display msg3
+
+last:   mov ah,4ch
         int 21h
         end

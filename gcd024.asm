@@ -26,6 +26,6 @@ mov bl,ah
 mov ah,00h
 call gcd
 
-final:ret
-      gcd endp
-      end
+final:  ret
+        gcd endp
+        end
